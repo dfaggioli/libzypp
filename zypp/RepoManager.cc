@@ -1108,6 +1108,7 @@ namespace zypp
           return;
 
         MIL << "Going to refresh metadata from " << url << endl;
+	std::cout << "Going to refresh metadata from " << url << endl;
 
 	// bsc#1048315: Always re-probe in case of repo format change.
 	// TODO: Would be sufficient to verify the type and re-probe
@@ -1132,6 +1133,8 @@ namespace zypp
 	    }
 	    // Adjust the probed type in RepoInfo
 	    info.setProbedType( repokind ); // lazy init!
+	    std::cout << "Going to refresh metadata: " << repokind << endl;
+
 	  }
 	  // no need to continue with an unknown type
 	  if ( repokind.toEnum() == RepoType::NONE_e )

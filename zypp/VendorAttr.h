@@ -45,7 +45,7 @@ class VendorAttr
   public:
     typedef std::vector<std::string> VendorList;
 
-    /** Singleton */
+    /** Singleton, mapped to the current Targets (or default) settings */
     static const VendorAttr & instance();
 
     /**

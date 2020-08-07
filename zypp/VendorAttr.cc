@@ -262,8 +262,7 @@ namespace zypp
   }
 
   bool VendorAttr::equivalent( const Vendor & lVendor, const Vendor & rVendor ) const
-  { return equivalent( IdString( lVendor ), IdString( rVendor ) );
-  }
+  { return equivalent( IdString( lVendor ), IdString( rVendor ) ); }
 
   bool VendorAttr::equivalent( sat::Solvable lVendor, sat::Solvable rVendor ) const
   { return equivalent( lVendor.vendor(), rVendor.vendor() ); }
